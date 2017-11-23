@@ -14,7 +14,6 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
-      - Adding template.yml to the target directory
       - cp template.yml target
 artifacts:
   files:
