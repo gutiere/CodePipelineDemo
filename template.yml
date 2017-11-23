@@ -6,8 +6,8 @@ Resources:
   LambdaFunction:
       Type: 'AWS::Serverless::Function'
       Properties:
-        CodeUri: s3://codebuild-us-west-2-624086151665-output-bucket/CodePipelineDemo.jar
-        Handler: :HelloWorld::handleRequest"
+        CodeUri: s3://codebuild-us-west-2-624086151665-output-bucket/CodeBuildDemo/target/CodePipelineDemo-1.0-SNAPSHOT.jar
+        Handler: "HelloWorld::handleRequest"
         Description: An example function
         FunctionName: "CodePipelineDemoFunction"
         Role: !GetAtt
