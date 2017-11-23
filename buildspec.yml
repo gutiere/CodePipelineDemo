@@ -1,10 +1,5 @@
 version: 0.2
 
-env:
-  parameter-store:
-    BUCKET: "codebuild-us-west-2-624086151665-output-bucket"
-
-
 phases:
   install:
     commands:
@@ -14,7 +9,7 @@ phases:
       - echo Nothing to do in the pre_build phase...
       - ls
 
-      - aws s3api put-object --bucket $BUCKET --key "template.yml" --body template.yml
+      - aws s3api put-object --bucket "codebuild-us-west-2-624086151665-output-bucket" --key "template.yml" --body template.yml
 
       - echo Nothing from ls?
   build:
