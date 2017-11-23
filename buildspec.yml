@@ -10,8 +10,6 @@ phases:
       - ls
 
       - aws s3api put-object --bucket "codebuild-us-west-2-624086151665-output-bucket" --key "template.yml" --body template.yml
-
-      - echo Nothing from ls?
   build:
     commands:
       - echo Build started on `date`
@@ -19,6 +17,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - cp template.yml target
 artifacts:
   files:
     - target/*
