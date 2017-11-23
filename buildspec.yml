@@ -7,9 +7,6 @@ phases:
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
-      - ls
-
-      - aws s3api put-object --bucket "codebuild-us-west-2-624086151665-output-bucket" --key "template.yml" --body template.yml
   build:
     commands:
       - echo Build started on `date`
@@ -17,6 +14,7 @@ phases:
   post_build:
     commands:
       - echo Build completed on `date`
+      - Adding template.yml to the target directory
       - cp template.yml target
 artifacts:
   files:
