@@ -9,6 +9,6 @@ public class HelloWorld {
 
     public String handleRequest(Map<String, Object> input, Context context) {
 
-        return input.toString();
+        return "Hello Family";
     }
 }
